@@ -1,6 +1,8 @@
 // UserProfile.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { QRCode } from 'react-qr-code';
+
 import userData from '../userData';
 import './userProfiles.scss';
 
@@ -13,29 +15,54 @@ const UserProfile = () => {
     return <div>User not found</div>;
   }
 
+  const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:${user.firstName} ${user.lastName}
+N:${user.lastName};${user.firstName}
+ORG:${user.organization || ''}
+TEL:${user.phone || ''}
+EMAIL:${user.email || ''}
+URL:${user.website || ''}
+TITLE:${user.title || ''}
+END:VCARD`;
+
   return (
     <div className="profile-wrapper">
-      <div>
-        <img src={user.photoUrl} alt={`${user.firstName} ${user.lastName}`} />
+      <div className="profile-card-wrapper">
+        <div className="user-profile-image">
+          <img
+            src={user.photoUrl}
+            alt={`${user.firstName} ${user.lastName}`}
+          />
+        </div>
         <h3>{user.firstName} {user.lastName} - {id}</h3>
-        <p>{user.bio}</p>
+        <p>Title: {user.title}</p>
         <p>Phone: {user.phone}</p>
         <p>Location: {user.location}</p>
-        <p>Title: {user.title}</p>
+        <p>{user.bio}</p>
 
-        <h4>Socials</h4>
-        <ul>
-          <li><a href={user.socials.twitter}><i className="fa-brands fa-x-twitter"></i></a></li>
-          <li><a href={user.socials.instagram}><i className="fa-brands fa-instagram"></i></a></li>
-          <li><a href={user.socials.github}><i className="fa-brands fa-github"></i></a></li>
+        <ul className="user-social-links">
+          <li><a href={user.socials.twitter}><i className="fa-brands fa-x-twitter soclink"></i></a></li>
+          <li><a href={user.socials.instagram}><i className="fa-brands fa-instagram soclink"></i></a></li>
+          <li><a href={user.socials.github}><i className="fa-brands fa-github soclink"></i></a></li>
         </ul>
-
-        <h4>Links</h4>
-        <ul>
+        
           {user.links.map((link, index) => (
-            <li key={index}><a href={link.url}>{link.label}</a></li>
+            <div className="link-item" key={index}><a href={link.url}>{link.label}</a></div>
           ))}
-        </ul>
+        
+
+        <p>add to your contacts:</p>
+        <div className="qr-padding">
+          <QRCode 
+            value={vCardData} 
+            size={120}
+            background="#fff"
+            foreground="#00f"
+            margin={10}
+            includeMargin={true} 
+          />
+        </div>
       </div>
     </div>
   );
