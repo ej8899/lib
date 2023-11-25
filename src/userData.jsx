@@ -17,9 +17,9 @@ const userData = {
       github: "https://github.com/johndoe",
     },
     links: [
-      { type: "external-link", label: "Portfolio", url: "https://erniejohnson.ca" },
-      { type: "email", label: "Email", url: "mailto:ernie@erniejohnson.ca" },
-      { type: "external-link", label: "Games", url: "https://erniejohnson.ca/pixelrealms" },
+      { order: 1, type: "external-link", label: "Portfolio", url: "https://erniejohnson.ca" },
+      { order: 3, type: "email", label: "Email", url: "mailto:ernie@erniejohnson.ca" },
+      { order: 2, type: "external-link", label: "Games", url: "https://erniejohnson.ca/pixelrealms" },
     ],
   },
   "456": {

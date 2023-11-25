@@ -15,6 +15,13 @@ const UserProfile = () => {
     return <div>User not found</div>;
   }
 
+  // TODO will need error checking for no user.links.
+  let sortedLinks = user.links;
+  if(user.links) {
+    sortedLinks = user.links.sort((a, b) => a.order - b.order);
+  }
+
+
   const vCardData = `BEGIN:VCARD
 VERSION:3.0
 FN:${user.firstName} ${user.lastName}
@@ -37,18 +44,20 @@ END:VCARD`;
         </div>
         <h3>{user.firstName} {user.lastName} - {id}</h3>
         <p>Title: {user.title}</p>
-        <p>Phone: {user.phone}</p>
-        <p>Location: {user.location}</p>
+        <p><i className="fa-solid fa-phone"></i> {user.phone}</p>
+        <p><i className="fa-solid fa-location-dot"></i> {user.location}</p>
         <p>{user.bio}</p>
 
-        <ul className="user-social-links">
-          <li><a href={user.socials.twitter}><i className="fa-brands fa-x-twitter soclink"></i></a></li>
-          <li><a href={user.socials.instagram}><i className="fa-brands fa-instagram soclink"></i></a></li>
-          <li><a href={user.socials.github}><i className="fa-brands fa-github soclink"></i></a></li>
+        <div className='social-menu'>
+        <ul>
+          <li><a href={user.socials.twitter}><i className="fa-brands fa-x-twitter fab"></i></a></li>
+          <li><a href={user.socials.instagram}><i className="fa-brands fa-instagram fab"></i></a></li>
+          <li><a href={user.socials.github}><i className="fa-brands fa-github fab"></i></a></li>
         </ul>
+        </div>
         
-          {user.links.map((link, index) => (
-            <div className="link-item" key={index}><a href={link.url}>{link.label}</a></div>
+          {sortedLinks.map((link, index) => (
+            <button className='link-button' key={index}  onClick={() => window.open(link.url)}>{link.label}</button>
           ))}
         
 
@@ -60,7 +69,7 @@ END:VCARD`;
             background="#fff"
             foreground="#00f"
             margin={10}
-            includeMargin={true} 
+            includemargin={true} 
           />
         </div>
       </div>
