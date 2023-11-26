@@ -72,6 +72,9 @@ else:
 
 
 # Output the result as JSON
+print("Access-Control-Allow-Origin: *");
+print("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+print("Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization");
 print("Content-Type: application/json")
 print()
 print(json.dumps(result, indent=2))
