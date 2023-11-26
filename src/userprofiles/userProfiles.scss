@@ -1,20 +1,70 @@
+:root {
+  // --card-background: purple;
+  // --card-button-background: teal;
+  // --card-button-hover: orange;
+  // --card-text: black;
+  // --card-button-text: white;
+  // --card-image-bg: orange;  
+  // --card-soc-icon: black;
+  // --card-button-text-hover: white;
+
+  // --card-background: #3aafa9;
+  // --card-button-background: #2b7a78;
+  // --card-button-hover: orange;
+  // --card-text: black;
+  // --card-button-text: white;
+  // --card-image-bg: orange;  
+  // --card-soc-icon: white;
+  // --card-button-text-hover: white;
+
+  // --card-background: #f5e6cc;
+  // --card-button-background: #a64ac9;
+  // --card-button-hover: #fccd04;
+  // --card-text: black;
+  // --card-button-text: white;
+  // --card-image-bg: orange;
+  // --card-soc-icon: white;
+  // --card-button-text-hover: white;
+
+  --card-background: #b4dfe5;
+  --card-button-background: #f4976c;
+  --card-button-hover: #303c6c;
+  --card-text: black;
+  --card-button-text: black;
+  --card-button-text-hover: white;
+  --card-image-bg: #f4976c;
+  --card-soc-icon: black;
+
+  // color theme ideas: 
+  // https://visme.co/blog/website-color-schemes/
+  // https://www.shutterstock.com/blog/color-palettes-for-websites?gclsrc=aw.ds&amp=1&gclid=CjwKCAiA04arBhAkEiwAuNOsIq6YNoHIvyd2DJ3NZDe63jQEIQI6-L6sOYYDiErvGIne-GhvuZ6lMRoCSlYQAvD_BwE&kw=&gad_source=1
+  // https://hookagency.com/blog/website-color-schemes/
+}
+
 .profile-wrapper {
   display: flex;
   
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  // height: 100vh;
   margin: 0;
 }
 
 .profile-card-wrapper {
-
+  background-color: var(--card-background);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
   margin: 0;
+  min-width: 400px;
+  max-width: 550px;
+
+  border: 2px solid black;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.5);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .user-profile-image {
@@ -41,7 +91,7 @@
   top: 0;
   left: 0;
 
-  background-color: orange;
+  background-color: var(--card-image-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +118,7 @@
 
 .user-social-links i {
   font-size: 34px;
+  
 }
 
 .soclink {
@@ -78,13 +129,17 @@
   }
 }
 
+
+p {
+  padding:15px;
+}
+
 h3 {
   font-size: 2rem;
   font-weight: bold;
-}
-
-p,h3 {
-  padding:15px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  padding-top: 15px;
 }
 
 .qr-padding {
@@ -93,8 +148,8 @@ p,h3 {
   background-color: white;
 }
 
-.link-item, .link-button {
-  background-color: teal;
+.link-item, .link-button, .display-phone {
+  background-color: var(--card-button-background);
   width: 100%;
   border: 2px solid black;
   border-radius: 5px;
@@ -102,31 +157,30 @@ p,h3 {
   padding: 10px;
   transition: all 0.3s ease-in-out;
   box-shadow: 4px 4px 4px rgba(0,0,0,.5);
+  display: inline-block;
+  color: var(--card-button-text);
 
   &:active {
     border: 2px solid black !important;
   }
   &:hover {
-    background-color: orange;
-    color: black;
+    background-color: var(--card-button-hover);
+    color: var(--card-button-text-hover);
     transform: translate(0, -5%);
   }
   
   & a {
-    color: black;
+    color: var(--card-button-text);
   }
 }
 
 
 
 .social-menu ul{
-  //position: absolute;
-  // top: 50%;
-  // left: 50%;
   padding: 0;
   margin: 0;
-  //transform: translate(-50%, -50%);
   display: flex;
+  margin-bottom: 20px;
 }
 
 .social-menu ul li{
@@ -139,10 +193,12 @@ p,h3 {
   line-height: 40px;
   transition: .3s;
   color: #000;
+  color: var(--card-soc-icon);
 }
 
 .social-menu ul li .fab:hover{
-  color: black;
+  //color: black;
+  color: var(--card-button-text-hover);
 }
 
 .social-menu ul li a{
@@ -153,7 +209,8 @@ p,h3 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: teal;
+  border: 2px solid black;
+  background-color: var(--card-button-background);
   text-align: center;
   transition: .3s;
   box-shadow: 4px 4px 4px rgba(0,0,0,.5);
@@ -161,5 +218,20 @@ p,h3 {
 
 .social-menu ul li a:hover{
   transform: translate(0, -5%);
-  background-color: orange;
+  background-color: var(--card-button-hover);
+  color: var(--card-button-text-hover);
+}
+
+.display-phone {
+  color: black;
+}
+
+.user-title {
+  padding-top: 0px;
+  padding-bottom: 0;
+  padding: 0.2rem;
+}
+
+.text-justify {
+  text-align: justify;
 }
