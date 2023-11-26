@@ -1,18 +1,41 @@
 // UserProfile.js
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { QRCode } from 'react-qr-code';
 
-import userData from '../userData';
 import './userProfiles.scss';
 
 
 const UserProfile = () => {
   const { id } = useParams();
-  const user = userData[id];
+  // const user = userData[id];
+  const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    // Fetch user data from the API
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch(`https://erniejohnson.ca/lib/api.py?user_id=${id}`, {
+          method: 'POST',
+          mode: 'cors',
+        });
+        if (!response.ok) {
+          throw new Error('Failed to fetch user data');
+        }
+        const rawData = await response.json();
+        const userData = Object.values(rawData)[0];
+        setUser(userData);
+      } catch (error) {
+        console.error('Error fetching user data:', error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [id]); // Trigger the effect when the user ID changes
+console.log(id)
+console.log(user)
   if (!user) {
-    return <div>User not found</div>;
+    return <div>Loading...</div>;
   }
 
   // TODO will need error checking for no user.links.
