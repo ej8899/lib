@@ -7,7 +7,7 @@ https://erniejohnson.ca/lib/api.py?countrecords=true
 ```
 
 ### Returns:
-```bash
+```json
 {
 "all_records_count": 13,
 "unique_titles_count": 6,
@@ -21,7 +21,7 @@ https://erniejohnson.ca/lib/api.py?user_id=123
 ```
 
 ### Returns:
-```bash
+```json
 [
 {
   "id": "123",
@@ -76,7 +76,7 @@ https://erniejohnson.ca/lib/api.py?title=Software%20Engineer
 ```
 
 ### Returns:
-```bash
+```json
 [
 {
   "id": "1",
@@ -127,7 +127,7 @@ https://erniejohnson.ca/lib/api.py?title=Software%20Engineer
 https://erniejohnson.ca/lib/api.py?location=San%20Francisco,%20CA,%20USA
 ```
 ### Returns:
-```bash
+```json
 [
 {
   "id": "5",
@@ -159,15 +159,15 @@ https://erniejohnson.ca/lib/api.py?title=all
 ```
 
 ### Returns:
-```bash
+```json
 {
 "unique_titles": [
-"Program Manager",
-"Tech Lead",
-"UI/UX Designer",
-"Division Lead",
-"Software Engineer",
-"UX Designer"
+  "Program Manager",
+  "Tech Lead",
+  "UI/UX Designer",
+  "Division Lead",
+  "Software Engineer",
+  "UX Designer"
 ]
 }
 ```
@@ -179,21 +179,21 @@ https://erniejohnson.ca/lib/api.py?location=all
 ```
 
 ### Returns:
-```bash
+```json
 {
 "unique_locations": [
-"Los Angeles, CA, USA",
-"Philadelphia, PA, USA",
-"San Francisco, CA, USA",
-"Chicago, IL, USA",
-"Boston, MA, USA",
-"Austin, TX, USA",
-"Seattle, WA, USA",
-"New York, NY, USA",
-"Houston, TX, USA",
-"Miami, FL, USA",
-"Calgary, AB, Canada",
-"Windsor, ON, Canada"
+  "Los Angeles, CA, USA",
+  "Philadelphia, PA, USA",
+  "San Francisco, CA, USA",
+  "Chicago, IL, USA",
+  "Boston, MA, USA",
+  "Austin, TX, USA",
+  "Seattle, WA, USA",
+  "New York, NY, USA",
+  "Houston, TX, USA",
+  "Miami, FL, USA",
+  "Calgary, AB, Canada",
+  "Windsor, ON, Canada"
 ]
 }
 ```
