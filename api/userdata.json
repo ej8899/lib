@@ -22,9 +22,9 @@
     {"order": 3, "type": "email", "label": "Contact", "url": "mailto:john.smith@example.com"},
     {"order": 2, "type": "external-link", "label": "Projects", "url": "https://johnsmith.ca/projects"}
   ],
-  "showqr": true,
+  "showqr": false,
   "showLocation": true,
-  "showPhone": true
+  "showPhone": false
 },
 "2": {
   "firstName": "Emily",
