@@ -1,0 +1,317 @@
+{
+"1": {
+  "firstName": "John",
+  "lastName": "Smith",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=male",
+  "phone": "+1 123-456-7890",
+  "location": "New York, NY, USA",
+  "title": "Software Engineer",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "john.smith@example.com",
+  "website": "http://www.johnsmith.com",
+  "organization": "JohnSmith.ca",
+  "socials": {
+    "twitter": "http://www.twitter.com/johnsmith",
+    "instagram": "https://www.instagram.com/johnsmith/",
+    "github": "https://github.com/johnsmith/",
+    "youtube": "https://www.youtube.com/@johnsmith",
+    "linkedin": "https://www.linkedin.com/in/john-smith/"
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://johnsmith.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:john.smith@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://johnsmith.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+"2": {
+  "firstName": "Emily",
+  "lastName": "Johnson",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=female",
+  "phone": "+1 987-654-3210",
+  "location": "Los Angeles, CA, USA",
+  "title": "UI/UX Designer",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "emily.johnson@example.com",
+  "website": "http://www.emilyjohnson.com",
+  "organization": "EmilyJohnson.ca",
+  "socials": {
+    "twitter": "http://www.twitter.com/emilyjohnson",
+    "instagram": "https://www.instagram.com/emilyjohnson/",
+    "github": "https://github.com/emilyjohnson/",
+    "youtube": "https://www.youtube.com/@emilyjohnson",
+    "linkedin": "https://www.linkedin.com/in/emily-johnson/"
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://emilyjohnson.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:emily.johnson@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://emilyjohnson.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+"3": {
+  "firstName": "Michael",
+  "lastName": "Davis",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=male",
+  "phone": "+1 555-555-5555",
+  "location": "Chicago, IL, USA",
+  "title": "Division Lead",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "michael.davis@example.com",
+  "website": "http://www.michaeldavis.com",
+  "organization": "MichaelDavis.ca",
+  "socials": {
+    "linkedin": "https://www.linkedin.com/in/michael-davis/"
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://michaeldavis.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:michael.davis@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://michaeldavis.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+"4": {
+  "firstName": "Jessica",
+  "lastName": "Miller",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=female",
+  "phone": "+1 555-123-4567",
+  "location": "Houston, TX, USA",
+  "title": "Tech Lead",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "jessica.miller@example.com",
+  "website": "http://www.jessicamiller.com",
+  "organization": "JessicaMiller.ca",
+  "socials": {
+    "twitter": "http://www.twitter.com/jessicamiller",
+    "instagram": "https://www.instagram.com/jessicamiller/",
+    "github": "https://github.com/jessicamiller/"
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://jessicamiller.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:jessica.miller@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://jessicamiller.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+"5": {
+  "firstName": "Brian",
+  "lastName": "Wilson",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=male",
+  "phone": "+1 555-987-6543",
+  "location": "San Francisco, CA, USA",
+  "title": "Program Manager",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "brian.wilson@example.com",
+  "website": "http://www.brianwilson.com",
+  "organization": "BrianWilson.ca",
+  "socials": {
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://brianwilson.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:brian.wilson@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://brianwilson.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+"6": {
+  "firstName": "Ashley",
+  "lastName": "Brown",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=female",
+  "phone": "+1 555-543-2109",
+  "location": "Miami, FL, USA",
+  "title": "UI/UX Designer",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "ashley.brown@example.com",
+  "website": "http://www.ashleybrown.com",
+  "organization": "AshleyBrown.ca",
+  "socials": {
+    "twitter": "http://www.twitter.com/ashleybrown",
+    "youtube": "https://www.youtube.com/@ashleybrown",
+    "linkedin": "https://www.linkedin.com/in/ashley-brown/"
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://ashleybrown.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:ashley.brown@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://ashleybrown.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+"7": {
+  "firstName": "Daniel",
+  "lastName": "Lee",
+  "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=male",
+  "phone": "+1 555-987-6543",
+  "location": "Seattle, WA, USA",
+  "title": "Software Engineer",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
+  "email": "daniel.lee@example.com",
+  "website": "http://www.daniellee.com",
+  "organization": "DanielLee.ca",
+  "socials": {
+    "twitter": "http://www.twitter.com/daniellee",
+    "instagram": "https://www.instagram.com/daniellee/",
+    "github": "https://github.com/daniellee/",
+    "youtube": "https://www.youtube.com/@daniellee",
+    "linkedin": "https://www.linkedin.com/in/daniel-lee/"
+  },
+  "links": [
+    {"order": 1, "type": "external-link", "label": "Portfolio", "url": "https://daniellee.ca"},
+    {"order": 3, "type": "email", "label": "Contact", "url": "mailto:daniel.lee@example.com"},
+    {"order": 2, "type": "external-link", "label": "Projects", "url": "https://daniellee.ca/projects"}
+  ],
+  "showqr": true,
+  "showLocation": true,
+  "showPhone": true
+},
+  "8": {
+    "firstName": "Olivia",
+    "lastName": "Martinez",
+    "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "phone": "+1 876-543-2109",
+    "location": "San Francisco, CA, USA",
+    "title": "Software Engineer",
+    "bio": "...",
+    "email": "olivia.martinez@example.com",
+    "website": "https://www.oliviamartinez.com",
+    "organization": "MartinezSoft",
+    "socials": {
+      "youtube": "https://www.youtube.com/oliviamartinez",
+      "linkedin": "https://www.linkedin.com/in/oliviamartinez/"
+    },
+    "links": [
+      {"order": 1, "type": "external-link", "label": "Software Portfolio", "url": "https://www.oliviamartinez.com/software-portfolio"},
+      {"order": 2, "type": "email", "label": "Contact", "url": "mailto:olivia.martinez@example.com"}
+    ],
+    "showqr": true,
+    "showLocation": true,
+    "showPhone": true
+  },
+  "9": {
+    "firstName": "Matthew",
+    "lastName": "White",
+    "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=male",
+    "phone": "+1 987-654-3210",
+    "location": "Austin, TX, USA",
+    "title": "Division Lead",
+    "bio": "...",
+    "email": "matthew.white@example.com",
+    "website": "https://www.matthewwhite.com",
+    "organization": "WhiteTech Solutions",
+    "socials": {
+      "twitter": "https://twitter.com/matthewwhite",
+      "instagram": "https://www.instagram.com/matthewwhite/",
+      "github": "https://github.com/matthewwhite",
+      "youtube": "https://www.youtube.com/matthewwhite",
+      "linkedin": "https://www.linkedin.com/in/matthewwhite/"
+    },
+    "links": [
+      {"order": 1, "type": "external-link", "label": "Tech Solutions", "url": "https://www.matthewwhite.com/tech-solutions"},
+      {"order": 2, "type": "email", "label": "Contact", "url": "mailto:matthew.white@example.com"}
+    ],
+    "showqr": true,
+    "showLocation": true,
+    "showPhone": true
+  },
+  "10": {
+    "firstName": "Sophia",
+    "lastName": "Taylor",
+    "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "phone": "+1 234-567-8901",
+    "location": "Boston, MA, USA",
+    "title": "Program Manager",
+    "bio": "...",
+    "email": "sophia.taylor@example.com",
+    "website": "https://www.sophiataylor.com",
+    "organization": "Taylor Programs",
+    "socials": {
+      "github": "https://github.com/sophiataylor",
+      "youtube": "https://www.youtube.com/sophiataylor",
+      "linkedin": "https://www.linkedin.com/in/sophiataylor/"
+    },
+    "links": [
+      {"order": 1, "type": "external-link", "label": "Program Management", "url": "https://www.sophiataylor.com/program-management"},
+      {"order": 2, "type": "email", "label": "Contact", "url": "mailto:sophia.taylor@example.com"}
+    ],
+    "showqr": true,
+    "showLocation": true,
+    "showPhone": true
+  },
+  "11": {
+    "firstName": "Ethan",
+    "lastName": "Harris",
+    "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=male",
+    "phone": "+1 345-678-9012",
+    "location": "Philadelphia, PA, USA",
+    "title": "UI/UX Designer",
+    "bio": "...",
+    "email": "ethan.harris@example.com",
+    "website": "https://www.ethanharris.com",
+    "organization": "Harris Designs",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/ethanharris/"
+    },
+    "links": [
+      {"order": 1, "type": "external-link", "label": "Design Portfolio", "url": "https://www.ethanharris.com/design-portfolio"},
+      {"order": 2, "type": "email", "label": "Contact", "url": "mailto:ethan.harris@example.com"}
+    ],
+    "showqr": true,
+    "showLocation": true,
+    "showPhone": true
+  },
+  "123": {
+    "firstName": "Ernie",
+    "lastName": "Johnson",
+    "photoUrl": "https://erniejohnson.ca/assets/profile2-8fa8b026.png",
+    "phone": "+1 705-331-8899",
+    "location": "Calgary, AB, Canada",
+    "title": "Software Engineer",
+    "bio": "Software developer since the 1990's involved in design and development of standalone applications, mobile device apps, web apps and fully interactive web and e-commerce sites. Experienced with Sharepoint development, GIS, Geospatial organization, cyber security awareness.",
+    "email": "ernie@erniejohnson.ca",
+    "website": "http://www.erniejohnson.ca",
+    "organization": "ErnieJohnson.ca",
+    "socials": {
+      "twitter": "http://www.twitter.com/ejdevscom",
+      "instagram": "https://www.instagram.com/erniejohnsonca/",
+      "github": "https://github.com/ej8899/",
+      "youtube": "https://www.youtube.com/@oldmancodes",
+      "linkedin": "https://www.linkedin.com/in/ernie-johnson/"
+    },
+    "links": [
+      { "order": 1, "type": "external-link", "label": "Web & App Design Portfolio", "url": "https://erniejohnson.ca" },
+      { "order": 3, "type": "email", "label": "Reach out via e-mail", "url": "mailto:ernie@erniejohnson.ca" },
+      { "order": 2, "type": "external-link", "label": "Game Dev (Pixel Realms)", "url": "https://erniejohnson.ca/pixelrealms" }
+    ],
+    "showqr": true,
+    "showLocation": true,
+    "showPhone": true
+  },
+  "456": {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "photoUrl": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "phone": "+1 987-654-3210",
+    "location": "Windsor, ON, Canada",
+    "title": "UX Designer",
+    "socials": {
+      "twitter": "https://twitter.com/janesmith",
+      "instagram": "https://instagram.com/janesmith",
+      "github": "https://github.com/janesmith"
+    },
+    "links": [
+      { "type": "external-link", "label": "Portfolio", "url": "https://janesmith.com" },
+      { "type": "email", "label": "Email", "url": "mailto:janesmith@example.com" }
+    ]
+  }
+}
