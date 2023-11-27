@@ -25,6 +25,7 @@ const TitleList = () => {
     };
 
     fetchTitles();
+    document.title = `Employee Job Titles`;
   }, []);
 
   return (

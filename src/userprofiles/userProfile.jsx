@@ -32,11 +32,15 @@ const UserProfile = () => {
 
     fetchUserData();
   }, [id]); // Trigger the effect when the user ID changes
-console.log(id)
-console.log(user)
+
+
   if (!user) {
     return <div>Loading...</div>;
   }
+  if(user.firstName && user.lastName && user.title) {
+    document.title = `${user.firstName} ${user.lastName} - ${user.title}`;
+  }
+
 
   // TODO will need error checking for no user.links.
   let sortedLinks = user.links;
@@ -76,31 +80,31 @@ END:VCARD`;
         <div className='social-menu'>
         <ul>
         {user.socials.twitter && (
-          <li><a href={user.socials.twitter}><i className="fa-brands fa-x-twitter fab"></i></a></li>
+          <li><a href={user.socials.twitter} target="_blank" rel="noreferrer"><i className="fa-brands fa-x-twitter fab"></i></a></li>
         )}
         {user.socials.instagram && (
-          <li><a href={user.socials.instagram}><i className="fa-brands fa-instagram fab"></i></a></li>
+          <li><a href={user.socials.instagram} target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram fab"></i></a></li>
         )}
         {user.socials.github && (
-          <li><a href={user.socials.github}><i className="fa-brands fa-github fab"></i></a></li>
+          <li><a href={user.socials.github} target="_blank" rel="noreferrer"><i className="fa-brands fa-github fab"></i></a></li>
         )}
         {user.socials.youtube && (
-          <li><a href={user.socials.youtube}><i className="fa-brands fa-youtube fab"></i></a></li>
+          <li><a href={user.socials.youtube} target="_blank" rel="noreferrer"><i className="fa-brands fa-youtube fab"></i></a></li>
         )}
         {user.socials.linkedin && (
-          <li><a href={user.socials.linkedin}><i className="fa-brands fa-linkedin fab"></i></a></li>
+          <li><a href={user.socials.linkedin} target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin fab"></i></a></li>
         )}
         {user.socials.whatsapp && (
-          <li><a href={user.socials.whatsapp}><i className="fa-brands fa-whatsapp fab"></i></a></li>
+          <li><a href={user.socials.whatsapp} target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp fab"></i></a></li>
         )}
         {user.socials.facebook && (
-          <li><a href={user.socials.facebook}><i className="fa-brands fa-facebook fab"></i></a></li>
+          <li><a href={user.socials.facebook} target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook fab"></i></a></li>
         )}
         {user.socials.tiktok && (
-          <li><a href={user.socials.tiktok}><i className="fa-brands fa-tiktok fab"></i></a></li>
+          <li><a href={user.socials.tiktok} target="_blank" rel="noreferrer"><i className="fa-brands fa-tiktok fab"></i></a></li>
         )}
         {user.socials.snapchat && (
-          <li><a href={user.socials.snapchat}><i className="fa-brands fa-snapchat fab"></i></a></li>
+          <li><a href={user.socials.snapchat} target="_blank" rel="noreferrer"><i className="fa-brands fa-snapchat fab"></i></a></li>
         )}
         </ul>
         </div>
@@ -124,7 +128,6 @@ END:VCARD`;
               background="#fff"
               foreground="#00f"
               margin={10}
-              includemargin={true} 
             />
           </div>
           </>

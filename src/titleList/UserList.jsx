@@ -25,6 +25,7 @@ const UserList = () => {
     };
 
     fetchUsersByTitle();
+    document.title = `${title} Directory`;
   }, [title]);
 
   return (

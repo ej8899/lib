@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Route, Link, Routes, useNavigate } from 'react-router-dom';
 import UserProfile from './userprofiles/userProfile';
 
 import TitleList from './titleList/TitleList';
@@ -13,7 +13,7 @@ const Home = () => <h2>Home</h2>;
 
 const Navigation = () => {
   const navigate = useNavigate();
-
+  
   return (
     <nav>
       <ul>
@@ -28,9 +28,8 @@ const Navigation = () => {
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <div>
-        
         <Routes>
         <Route
             path="/"
@@ -42,7 +41,7 @@ const App = () => {
           <Route path="/users/:title" element={<UserList />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 
