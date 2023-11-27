@@ -30,7 +30,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Link to="/">Home</Link>
+        
         <Routes>
         <Route
             path="/"
