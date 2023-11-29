@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
   width: 100%;
 
@@ -33,12 +33,12 @@
   // --card-button-text-hover: white;
 
   --card-background: #b4dfe5;
-  --card-button-background: #f4976c;
+  --card-button-background: #e2922f;
   --card-button-hover: #303c6c;
   --card-text: black;
   --card-button-text: black;
   --card-button-text-hover: white;
-  --card-image-bg: #f4976c;
+  --card-image-bg: var(--card-button-background);
   --card-soc-icon: black;
 
   // color theme ideas: 
@@ -112,4 +112,10 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

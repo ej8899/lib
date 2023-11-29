@@ -1,21 +1,21 @@
-// UserList.jsx
+// UserListByLocation.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-const UserList = () => {
-  const { title } = useParams();
+const UserListByLocation = () => {
+  const { location } = useParams();
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch the list of users based on the selected title from the API
-    const fetchUsersByTitle = async () => {
+    // Fetch the list of users in the specific location from the API
+    const fetchUsersByLocation = async () => {
       try {
-        const response = await fetch(`https://erniejohnson.ca/lib/api.py?title=${title}`, {
+        const response = await fetch(`https://erniejohnson.ca/lib/api.py?location=${location}`, {
           method: 'POST',
           mode: 'cors',
         });
         if (!response.ok) {
-          throw new Error('Failed to fetch users by title');
+          throw new Error('Failed to fetch users by location');
         }
         const usersData = await response.json();
         const sortedUsers = usersData.sort((a, b) => {
@@ -25,24 +25,24 @@ const UserList = () => {
         });
         setUsers(sortedUsers);
       } catch (error) {
-        console.error('Error fetching users by title:', error.message);
+        console.error('Error fetching users by location:', error.message);
       }
     };
 
-    fetchUsersByTitle();
-    document.title = `${title} Directory`;
-  }, [title]);
+    fetchUsersByLocation();
+    document.title = `Employee Locations for ${location}`;
+  }, [location]);
 
   return (
     <div className='centerthis'>
       <br></br>
-      <h2>{`Users with Title: ${title}`}</h2>
+      <h2>{`Users in ${location}`}</h2>
       <ul>
-      {users.map((user) => (
+        {users.map((user) => (
           <li className='users-list-item' key={user.id}>
             <Link to={`/user/${user.id}`}>
-            <h3>{`${user.firstName} ${user.lastName}`}</h3>
-            <p>{`Location: ${user.location}`}</p>
+              <h3>{`${user.firstName} ${user.lastName}`}</h3>
+              <p>{`Title: ${user.title}`}</p>
             </Link>
           </li>
         ))}
@@ -51,4 +51,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default UserListByLocation;

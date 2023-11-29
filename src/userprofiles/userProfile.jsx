@@ -6,10 +6,10 @@ import { QRCode } from 'react-qr-code';
 import './userProfiles.scss';
 
 
-const UserProfile = () => {
+const UserProfile = ({setHideNav}) => {
   const { id } = useParams();
-  // const user = userData[id];
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch user data from the API
@@ -25,17 +25,30 @@ const UserProfile = () => {
         const rawData = await response.json();
         const userData = Object.values(rawData)[0];
         setUser(userData);
+        setHideNav(userData.hideNav || false);
+        console.log('hideNav:',userData.hideNav)
       } catch (error) {
         console.error('Error fetching user data:', error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchUserData();
-  }, [id]); // Trigger the effect when the user ID changes
+  }, [id]);
 
+  useEffect(() => {
+    
+  }, [setHideNav]);
+
+  if (loading) {
+    // TODO - put a spinner here
+    return <p>Loading...</p>;
+  }
 
   if (!user) {
-    return <div>Loading...</div>;
+    // TODO - deal with no user
+    return <div>no user...</div>;
   }
   if(user.firstName && user.lastName && user.title) {
     document.title = `${user.firstName} ${user.lastName} - ${user.title}`;

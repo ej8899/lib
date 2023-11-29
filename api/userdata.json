@@ -295,7 +295,8 @@
     ],
     "showqr": true,
     "showLocation": true,
-    "showPhone": true
+    "showPhone": true,
+    "hideNav": true
   },
   "456": {
     "firstName": "Jane",

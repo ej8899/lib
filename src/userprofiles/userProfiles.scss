@@ -5,12 +5,23 @@
   
   justify-content: center;
   align-items: center;
-  // height: 100vh;
+  height: 100vh;
   margin: 0;
 }
 
 .profile-card-wrapper {
   background-color: var(--card-background);
+  background: 
+    radial-gradient(
+      farthest-side at top left,
+      rgba(5, 158, 166, 1), 
+      transparent 800px
+    ),
+    radial-gradient(
+      farthest-corner at bottom right,
+      rgba(221, 121, 21, 1), 
+      transparent 500px
+    );
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,0 +1,40 @@
+/* NavBar.css */
+.nav-header {
+  position: sticky;
+  top: 0;
+  background: #f0f0f0;
+  padding: 10px;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  position: inherit;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 5px;
+  // border: 2px solid black;
+  transition: all 0.3s;
+  border-radius: 5px;
+  &:hover {
+    background-color: orange;
+  }
+}
