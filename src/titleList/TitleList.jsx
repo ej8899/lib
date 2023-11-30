@@ -32,13 +32,15 @@ const TitleList = () => {
     <div>
       <br></br>
       <h2>Filter by Job Titles:</h2>
+      <div className='centerthis'>
       <ul>
         {titles.map((title, index) => (
-          <li key={index}>
-            <Link to={`/users/${encodeURIComponent(title)}`}>{title}</Link>
+          <li className='users-list-item' key={index}>
+            <Link className='text-black' to={`/users/${encodeURIComponent(title)}`}>{title}</Link>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

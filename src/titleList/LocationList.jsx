@@ -34,13 +34,15 @@ const LocationList = () => {
     <div>
       <br></br>
       <h2>Review Employees by Locations:</h2>
+      <div className='centerthis'>
       <ul>
         {locations.map((location, index) => (
-          <li key={index}>
-            <Link to={`/location/${encodeURIComponent(location)}`}>{location}</Link>
+          <li className='users-list-item text-black' key={index}>
+            <Link className='text-black' to={`/location/${encodeURIComponent(location)}`}>{location}</Link>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 // UserProfile.js
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { QRCode } from 'react-qr-code';
 
@@ -10,6 +10,32 @@ const UserProfile = ({setHideNav}) => {
   const { id } = useParams();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isMenuVisible, setMenuVisible] = useState(false);
+  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
+  const menuRef = useRef(null);
+
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+    console.log('togglemenu:',isMenuVisible)
+    const { clientX, clientY } = e;
+    setMenuPosition({ x: clientX, y: clientY });
+    setMenuVisible(!isMenuVisible);
+  };
+
+  const closeMenu = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      console.log('closemenu click')
+      setMenuVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', closeMenu);
+    return () => {
+      document.removeEventListener('click', closeMenu);
+    };
+  }, []);
+
 
   useEffect(() => {
     // Fetch user data from the API
@@ -80,6 +106,23 @@ END:VCARD`;
   return (
     <div className="profile-wrapper">
       <div className="profile-card-wrapper">
+        <div className="user-profile-more">
+          <span className='user-profile-extra' onClick={toggleMenu} >
+            <i className="fa-solid fa-ellipsis-vertical fa-xl"></i>
+          </span>
+        </div>
+        {isMenuVisible && (
+        <div className="user-profile-menu"
+          style={{ position: 'absolute', top: `${menuPosition.y}px`, left: `${menuPosition.x}px` }}
+          ref={menuRef}
+        >
+          <ul>
+            <li><i className="fa-solid fa-caret-right fadull"></i>&nbsp;<a href="/">Home</a></li>
+            <li><i className="fa-solid fa-caret-right fadull"></i>&nbsp;Share</li>
+            <li><i className="fa-solid fa-caret-right fadull"></i>&nbsp;Report</li>
+          </ul>
+        </div>
+        )}
         <div className="user-profile-image">
           <img
             src={user.photoUrl}

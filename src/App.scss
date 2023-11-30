@@ -32,7 +32,8 @@
   // --card-soc-icon: white;
   // --card-button-text-hover: white;
 
-  --card-background: #b4dfe5;
+  //--card-background: #b4dfe5;
+  --card-background: teal;
   --card-button-background: #e2922f;
   --card-button-hover: #303c6c;
   --card-text: black;
@@ -40,6 +41,7 @@
   --card-button-text-hover: white;
   --card-image-bg: var(--card-button-background);
   --card-soc-icon: black;
+  --border-radius: 2px;
 
   // color theme ideas: 
   // https://visme.co/blog/website-color-schemes/
@@ -89,12 +91,14 @@ h2 {
   padding: 5px;
   padding-bottom: 15px;
 }
+
 li {
   padding: 5px;
 }
 
 
 .users-list-item {
+  color:black;
   border: 2px solid black;
   width: 300px;
   margin: 10px;
@@ -102,6 +106,16 @@ li {
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: var(--card-button-text-hover);
+  }
+  & h3 {
+    color:black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.0rem;
+  }
+  & p {
+    padding-top: 0.2rem;
+    color: darkblue;
   }
 }
 
@@ -118,4 +132,8 @@ li {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.text-black {
+  color:black;
 }

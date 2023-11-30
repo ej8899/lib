@@ -42,7 +42,7 @@ const UserListByLocation = () => {
           <li className='users-list-item' key={user.id}>
             <Link to={`/user/${user.id}`}>
               <h3>{`${user.firstName} ${user.lastName}`}</h3>
-              <p>{`Title: ${user.title}`}</p>
+              <p>{`${user.title}`}</p>
             </Link>
           </li>
         ))}
