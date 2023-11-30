@@ -1,4 +1,4 @@
-# Link in Bio / Company Directory
+# Link in Bio / Company Directory App
 
 Our freelance client came to us with the problem of wanting ‘link in bio’ pages for numerous key employees and were curious about an in-house solution vs an existing on the market solution that would have cost them over $1300 per month.
 
@@ -24,5 +24,5 @@ Planned Features:
 
 
 
-Attributions:
-- <a href="https://www.flaticon.com/free-icons/link" title="link icons">Link icons created by Eucalyp - Flaticon</a>
+### Attributions:
+- <a href="https://www.flaticon.com/free-icons/link" title="link icons">Favicon created by Eucalyp - Flaticon</a>
