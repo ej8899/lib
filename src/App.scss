@@ -106,6 +106,7 @@ li {
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: var(--card-button-text-hover);
+    transform: translate(0, -5%);
   }
   & h3 {
     color:black;
